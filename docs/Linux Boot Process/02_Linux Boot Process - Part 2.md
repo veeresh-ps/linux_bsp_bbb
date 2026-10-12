@@ -31,7 +31,7 @@ These tell the Boot ROM which boot configuration has been selected and what boot
 The Technical Reference Manual (Table 26-7. SYSBOOT Configuration Pins[4]) defines the relationship between the SYSBOOT pin values and the boot configuration.
 
 *AM3358 TRM showing SYSBOOT[4:0] boot configuration / boot device selection*
-![SYSBOOT table](../docs/images/table_SYSBOOT.png)
+![SYSBOOT table](../../docs/images/table_SYSBOOT.png)
 
 Conceptually:
 
@@ -68,7 +68,7 @@ The actual logic levels on SYSBOOT[4:0] are determined by how the **BeagleBone B
 
 This is where the BBB schematic becomes important.
 
-![boot configuration](../docs/images/Sch_Boot_Configuration.png)
+![boot configuration](../../docs/images/Sch_Boot_Configuration.png)
 
 The schematic shows how the board hardware establishes the boot configuration seen by the AM3358.
 
@@ -98,7 +98,7 @@ On boot, the processor will look for the eMMC on the MMC1 port first, followed b
 The **BOOT button** changes the relevant boot configuration during power-up, allowing the board to use the microSD boot path.
 
 *BeagleBone Black board image showing and labeling: BOOT button, onboard eMMC, and microSD slot*
-![boot configuration](../docs/images/bbb_components.png)
+![boot configuration](../../docs/images/bbb_components.png)
 
 Hold the boot button down. On boot, the processor will look for the SPIO0 port first, then microSD on the MMC0 port, followed by USB0 and UART0. In the event there is no microSD card and the eMMC is empty, USB0 or UART0 could be used as the board source.
 
@@ -156,10 +156,10 @@ Instead, we observe the result of a successful handoff.
 For example, I can boot the BBB through different boot configurations and capture the serial output.
 
 *Terminal log showing normal boot path*
-![normal boot path](../docs/images/boot_path_normal.png)
+![normal boot path](../../docs/images/boot_path_normal.png)
 
 *Terminal log showing microSD boot path with BOOT button held*
-![boot button path](../docs/images/boot_path_boot_button.png)
+![boot button path](../../docs/images/boot_path_boot_button.png)
 
 The first visible messages come only after the next boot stage has started executing.
 
